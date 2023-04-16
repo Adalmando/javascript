@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversão montaria</title>
+</head>
+<body>
+    <h1>Convertendo um float para real/dolar/euro:</h1>
+
+    <script>
+
+        var valor = 1550.10
+
+        // Dessa forma ele não imprime os dois numeros depois do ponto:
+        document.write(valor+'<br>')
+
+        // Dessa forma colocamos 3 casa depois da virgula:
+        document.write(valor.toFixed(3) +'<br>')
+
+        // Dessa forma imprime o valor no formato de real:
+        document.write(valor.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})+ '<br>')
+
+        // Dessa forma imprime o valor no formato de dolar:
+        document.write(valor.toLocaleString('pt-BR', {style: 'currency', currency: 'USD'})+ '<br>')
+
+        // Dessa forma imprime o valor no formato de euro:
+        document.write(valor.toLocaleString('pt-BR', {style: 'currency', currency: 'EUR'})+ '<br>')
+
+    </script>
+</body>
+</html>

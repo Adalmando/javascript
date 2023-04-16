@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title>Aula um</title>
+    
+    <style>
+        body{
+            background-color: rgb(160, 57, 57);
+            color: white;
+            font: normal 20pt Arial;
+            }
+        h1{
+            color: rgb(213, 213, 56);
+        }
+   
+   </style>
+</head>
+
+<body>
+
+    <h1>Olá mundo!</h1>
+    <p>Meu primeiro projeto usando js!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam sunt perferendis vitae nobis vel veritatis error explicabo fugit perspiciatis molestias quis in, delectus quae debitis soluta modi facilis est nulla?</p>
+    
+    <script>
+        // Por padrão o prompt passa um tipo string para a variável.
+        var nome = prompt('Qual seu nome?')
+        var num1 = prompt('Digite um numero:')
+        var num2 = prompt('Digite outro numero:')
+
+        // Convertendo o string do prompt para number:
+        // Podemos usar o parseInt ou parseFloat.
+        var soma = parseFloat(num1) + parseFloat(num2)
+        
+        alert(nome +', o resultado da soma é ' +soma)
+
+        // Imprimindo o tipo da variavel soma:
+        alert(typeof(soma))
+
+        // Convertendo um numero para um String: 
+        // também podemos usar: String(soma).
+        var somaString = soma.toString() 
+
+        // Convertendo soma (number) para String:
+        alert(typeof(somaString))
+
+        // Outra forma de concatenação, a melhor:
+        // Lembrando que tem que usar craze e nao aspas, para fazer isso
+        alert(`Obrigado por participar, ${nome}, a sua soma deu ${soma}`)
+
+    </script>
+
+    
+    
+</body>
+</html>
