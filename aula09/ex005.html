@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introdução ao DOM</title>
+    <Style>
+        body{
+            background-color: rgb(90, 90, 201);
+            color: white;
+            font: normal 15pt Arial;
+        }
+    </Style>
+</head>
+<body>
+    <h1>Iniciando os estudos DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
+
+    <div>Div simples</div>
+    <div id="id">Div com id</div>
+    <div name="nome">Div com nome</div>
+    <div class="classe">Div com classe</div>
+
+    <script>
+
+        // buscando uma tag por marca e passando o indice, caso contrario ele pega todas as tags daquele tipo que passei na busca:
+        var p1 = document.getElementsByTagName('div')[0]
+        document.write(`<br>A variavel p1 guarda: ${p1.innerText}`)
+
+
+        // buscando uma tag por id, como essa busca não é no plural, ela busca apenas um elemento, não precisamos passar indices:
+        var p2 = document.getElementById('id')
+        document.write(`<br>A variavel p2 guarda: ${p2.innerText}`)
+
+
+        // Nesse metodo de busca por varios elementos por nome, como eu quero só um eu passo também o indice dele:
+        var p3 = document.getElementsByName('nome')[0]
+        document.write(`<br>A variavel p3 guarda: ${p3.innerText}`)
+
+
+        // buscando tags com o querySelector, ele aceita id(#) e class(.):
+        var p4 = document.querySelector('div#id')
+        document.write(`<br>A variavel p4 guarda: ${p4.innerText}`)    
+        
+
+        // buscando tags com o querySelector, ele aceita id(#) e class(.):
+        var p5 = document.querySelector('div.classe')
+        document.write(`<br>A variavel p4 guarda: ${p5.innerText}`)    
+
+    </script>
+</body>
+</html>
