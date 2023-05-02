@@ -1,0 +1,1 @@
+document.getElementById("texto").innerHTML="Este paragrafo foi feito com innerHTML";
