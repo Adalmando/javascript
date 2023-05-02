@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de boas vindas</title>
+    <style>
+        body{
+            background-color: rgb(7, 31, 7);
+            color: white;
+            font: normal 14pt Arial;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>Bem-vindo</h1>
+    Informe seu país: <input type="text" name="txtpais" id="txtpais">
+    <input type="button" value="Gerar Mensagem" onclick="gerar()">
+    <div id="res">Resultado</div>
+
+    <script>
+        
+        function gerar(){
+            var pais = document.querySelector('input#txtpais').value.toUpperCase()
+            var resultado = document.querySelector('div#res')
+            resultado.innerHTML = `<p>Você vive em <strong>${pais}</strong></p>`
+            if(pais != 'BRASIL'){
+                resultado.innerHTML += `<p>Você é <strong>ESTRANGEIRO</strong>!</p>`
+            } else{
+                resultado.innerHTML += `<p>Você é <strong>BRASILEIRO</strong>!</p>`
+            }
+            resultado.innerHTML += `<p>Faça bom proveito da nossa estadia!</p>`
+
+        }
+
+
+    </script>
+
+</body>
+</html>
