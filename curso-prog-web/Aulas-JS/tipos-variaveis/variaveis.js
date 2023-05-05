@@ -28,6 +28,7 @@ const x = 8;
 {
     // como aqui é outro contexto eu posso criar outra const x e atribuir o que quiser
     const x = 18;
+    // x = 60;
     console.log(x);
 }
 
